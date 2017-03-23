@@ -8,11 +8,9 @@ export default class DynamicChildrenDemo extends Component {
       show: this.props.initialShow,
       images: [ 'https://unsplash.it/150?image=0','https://unsplash.it/150?image=1', 'https://unsplash.it/150?image=2','https://unsplash.it/150?image=3', 'https://unsplash.it/150?image=4' ]
     }
-
-    this.showImage = this.showImage.bind(this)
   }
 
-  showImage () {
+  showImage = () => {
     this.setState({ show: true })
   }
 
@@ -20,8 +18,11 @@ export default class DynamicChildrenDemo extends Component {
     return (
       <div>
         <h1>Dynamic Children Demo</h1>
-        { !this.state.show &&
-            <button onClick={this.showImage}>Show me a bunch of images!</button>
+        {
+          !this.state.show &&
+            <button onClick={this.showImage}>
+              Show me a bunch of images!
+            </button>
         }
 
         <div className={this.state.show ? 'show' : ''}>

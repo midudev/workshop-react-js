@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 const demos = [
   '01-hello-world',
-  'life-cycle',
   'dynamic-children',
-  'nesting-views',
-  'encapsulating-libraries'
+  'encapsulating-libraries',
+  'life-cycle',
+  'nesting-views'
 ];
 
 const demosComponents = demos.reduce((acc, demo) => {
@@ -59,8 +59,6 @@ export default class App extends Component {
         {(demoToLoad === 'DynamicChildrenDemo') && <DynamicChildrenDemo initialShow={true} />}
 
         {(demoToLoad === 'NestingViewsDemo') && <NestingViewsDemo />}
-
-        {(demoToLoad === 'EncapsulatingLibrariesDemo') && <EncapsulatingLibrariesDemo />}
       */}
 
       </div>
