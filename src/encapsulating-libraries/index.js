@@ -1,25 +1,6 @@
 import React, { Component } from 'react';
 import Timeago from './Timeago.js';
 
-/*
-function RadioButton (props) {
-  return (
-    <label>
-      <input
-        checked={props.selectedDate === props.date}
-        type='radio'
-        value={props.date}
-        onChange={props.onChange} />
-        {props.date}
-    </label>)
-}
-
-<RadioButton
-  date='2016-10-01'
-  selectedDate={this.state.date}
-  onChange={this.handleChange} />
-*/
-
 export default class EncapsulatingLibrariesDemo extends Component {
   constructor (...args) {
     super(...args)
@@ -34,9 +15,8 @@ export default class EncapsulatingLibrariesDemo extends Component {
   render () {
     return (
       <div>
-        <h1>Encapsulating Libraries Demo</h1>
         <h3>Encapsulated moment.js library to Timeago component</h3>
-
+        
         <div>
           <label>
             <input

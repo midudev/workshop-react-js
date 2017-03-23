@@ -35,7 +35,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  text-align: center;
 }
 
 h1 {
@@ -107,6 +106,7 @@ img {
 .demo {
   padding-top: 50px;
   position: relative;
+  padding-left: 50px;
 }
 
 .usage {

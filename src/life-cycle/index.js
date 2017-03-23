@@ -59,7 +59,6 @@ export default class LifeCycleDemo extends Component {
     console.log('<LifeCycleDemo> render')
     return (
       <div>
-        <h1>Life Cycle Demo</h1>
         <p><strong>State: </strong><code>{JSON.stringify(this.state)}</code></p>
         <p><strong>Props: </strong><code>{JSON.stringify(this.props)}</code></p>
         <button onClick={this.changeState}>Change component state</button>

@@ -17,7 +17,6 @@ export default class DynamicChildrenDemo extends Component {
   render () {
     return (
       <div>
-        <h1>Dynamic Children Demo</h1>
         {
           !this.state.show &&
             <button onClick={this.showImage}>

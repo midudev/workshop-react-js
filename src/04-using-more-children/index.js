@@ -16,9 +16,9 @@ export class Article extends Component {
   render () {
     return (
       <div>
-        <Title>Título del artículo</Title>
+        <Title>Title of the article</Title>
         {this.props.children}
-        <span>Autor: {this.props.autor}</span>
+        <span>Author: {this.props.author}</span>
       </div>
     );
   }
