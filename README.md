@@ -22,11 +22,11 @@ You'll need installed the next applications. You might want to use `nvm`.
   git clone git@github.com:miduga/workshop-react-js.git
   cd workshop-react-js
   npm install
-  ``` 
+  ``` 
   
 3. Start the server
 
-  ```bash
+  ```bash
   npm start
-  ```
+  ```
   
