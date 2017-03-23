@@ -3,8 +3,20 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+.hljs {
+  font-size: 12px;
+  padding: 25px;
+  text-align: left;
 }
 
 body {
@@ -76,6 +88,14 @@ img {
   margin: 20px auto;
 }
 
-section {
+.content {
   padding-left: 250px;
+}
+
+.demo {
+  margin-top: 50px;
+}
+
+.usage {
+  background: #999;
 }

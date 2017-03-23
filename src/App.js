@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import Highlight from 'react-highlight.js';
+import jsxToString from 'jsx-to-string';
 
 const demos = [
   '01-hello-world',
+  '02-hello-world-with-props',
+  '03-using-special-prop-children',
   'dynamic-children',
   'encapsulating-libraries',
   'life-cycle',
@@ -33,6 +37,7 @@ export default class App extends Component {
   render () {
     const {demoToLoad} = this.state;
     const demoComponent = demosComponents[demoToLoad];
+    console.log(demoComponent)
 
     return (
       <div>
@@ -49,8 +54,16 @@ export default class App extends Component {
           ))}
         </nav>
 
-        <section className='demo'>
-          { demoComponent }
+        <section className='content'>
+          <section className='usage'>
+            <Highlight language='js'>
+            { jsxToString(demoComponent) }
+            </Highlight>
+          </section>
+
+          <section className='demo'>
+            { demoComponent }
+          </section>
         </section>
 
       </div>
