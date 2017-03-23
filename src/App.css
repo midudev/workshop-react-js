@@ -26,47 +26,56 @@ p {
   color: rgba(51, 48, 48, 0.6);
 }
 
-header {
-  margin: 50px 0;
+nav {
+  border-right: 1px solid #ccc;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
   text-align: center;
+  width: 250px;
 }
 
-button {
-  position: relative;
-  vertical-align: top;
-  display:inline-block;
-  height: 35px;
-  padding: 0px 10px;
-  font-size: 14px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  background: #2980b9;
+nav h3 {
+  color: #444;
+  padding-left: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+nav button {
+  background: transparent;
   border: 0;
-  border-bottom: 2px solid #2475ab;
+  color: #222;
   cursor: pointer;
-  -webkit-box-shadow: inset 0 -2px #2475ab;
-  box-shadow: inset 0 -2px #2475ab;
-  margin: 5px;
-  outline: 0;
+  display: block;
+  font-size: 10px;
+  padding: 10px 20px 10px 10px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
 }
 
-button:hover {
+nav button:hover {
+  background-color: #ccc;
   opacity: .85;
 }
 
-button.active {
-  background: #2475ab;
+nav button.active {
+  background-color: #eee;
+  color: #555;
 }
 
-button:active {
-  top: 1px;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+nav button:active,
+nav button:focus {
+  outline: 0;
 }
 
 img {
   display: block;
   margin: 20px auto;
+}
+
+section {
+  padding-left: 250px;
 }

@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 
-import LifeCycleDemo from './life-cycle';
-import DynamicChildrenDemo from './dynamic-children'
-import NestingViewsDemo from './nesting-views';
-import EncapsulatingLibrariesDemo from './encapsulating-libraries'
+const demos = [
+  '01-hello-world',
+  'life-cycle',
+  'dynamic-children',
+  'nesting-views',
+  'encapsulating-libraries'
+];
+
+const demosComponents = demos.reduce((acc, demo) => {
+  acc[demo] = require(`./${demo}/demo`).default
+  return acc
+}, {})
 
 import './App.css'
 
@@ -11,40 +19,41 @@ export default class App extends Component {
   constructor (...args) {
     super(...args);
 
-    this.changeDemo = this.changeDemo.bind(this);
-
     this.state = {
-      demoToLoad : 'LifeCycleDemo'
+      demoToLoad : demos[0]
     }
   }
 
   changeDemo (demoToLoad) {
-    return () => { // arrow function to bind this context
+    return () => {
       this.setState({ demoToLoad });
     }
   }
 
   render () {
     const {demoToLoad} = this.state;
+    const demoComponent = demosComponents[demoToLoad];
 
     return (
       <div>
+        <nav>
+          <h3>Demos</h3>
+          {demos.map(demo => (
+            <button
+              className={demoToLoad === demo ? 'active' : ''}
+              key={demo}
+              onClick={this.changeDemo(demo)}
+            >
+              {demo}
+            </button>
+          ))}
+        </nav>
 
-        <header>
-          <button
-            className={demoToLoad === 'LifeCycleDemo' ? 'active' : ''}
-            onClick={this.changeDemo('LifeCycleDemo')}>LifeCycleDemo</button>
-          <button
-            className={demoToLoad === 'DynamicChildrenDemo' ? 'active' : ''}
-            onClick={this.changeDemo('DynamicChildrenDemo')}>DynamicChildrenDemo</button>
-          <button
-            className={demoToLoad === 'NestingViewsDemo' ? 'active' : ''}
-            onClick={this.changeDemo('NestingViewsDemo')}>NestingViewsDemo</button>
-          <button
-            className={demoToLoad === 'EncapsulatingLibrariesDemo' ? 'active' : ''}
-            onClick={this.changeDemo('EncapsulatingLibrariesDemo')}>EncapsulatingLibrariesDemo</button>
-        </header>
+        <section className='demo'>
+          { demoComponent }
+        </section>
 
+        {/*
         {(demoToLoad === 'LifeCycleDemo') && <LifeCycleDemo initialMessage='Hola mundo' sizeMessage={12} />}
 
         {(demoToLoad === 'DynamicChildrenDemo') && <DynamicChildrenDemo initialShow={true} />}
@@ -52,6 +61,7 @@ export default class App extends Component {
         {(demoToLoad === 'NestingViewsDemo') && <NestingViewsDemo />}
 
         {(demoToLoad === 'EncapsulatingLibrariesDemo') && <EncapsulatingLibrariesDemo />}
+      */}
 
       </div>
     )
