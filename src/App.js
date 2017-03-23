@@ -17,6 +17,10 @@ const demosComponents = demos.reduce((acc, demo) => {
   return acc
 }, {})
 
+const Tag = ({text, inverted = ''}) => (
+  <span className={`tag ${inverted && 'inverted'}`}>{text}</span>
+)
+
 import './App.css'
 
 export default class App extends Component {
@@ -56,12 +60,14 @@ export default class App extends Component {
 
         <section className='content'>
           <section className='usage'>
+            <Tag inverted text='CODE' />
             <Highlight language='js'>
             { jsxToString(demoComponent) }
             </Highlight>
           </section>
 
           <section className='demo'>
+            <Tag text='RESULT' />
             { demoComponent }
           </section>
         </section>
