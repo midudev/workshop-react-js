@@ -5,6 +5,7 @@ const demos = [
   '01-hello-world',
   '02-hello-world-with-props',
   '03-using-special-prop-children',
+  '04-using-more-children',
   'dynamic-children',
   'encapsulating-libraries',
   'life-cycle',
