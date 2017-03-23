@@ -53,14 +53,6 @@ export default class App extends Component {
           { demoComponent }
         </section>
 
-        {/*
-        {(demoToLoad === 'LifeCycleDemo') && <LifeCycleDemo initialMessage='Hola mundo' sizeMessage={12} />}
-
-        {(demoToLoad === 'DynamicChildrenDemo') && <DynamicChildrenDemo initialShow={true} />}
-
-        {(demoToLoad === 'NestingViewsDemo') && <NestingViewsDemo />}
-      */}
-
       </div>
     )
   }

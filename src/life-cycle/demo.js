@@ -1,6 +1,4 @@
 import React from 'react'
-import HelloWorld from './index.js'
+import LifeCycle from './index.js'
 
-export default function HelloWorldDemo () {
-  return <HelloWorld />;
-}
+export default <LifeCycle initialMessage='Hola mundo' sizeMessage={12} />;
