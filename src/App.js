@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Highlight from 'react-highlight.js';
 import jsxToString from 'jsx-to-string';
 
 const demos = [
@@ -18,7 +17,7 @@ const demosComponents = demos.reduce((acc, demo) => {
 }, {})
 
 const Tag = ({text, inverted = ''}) => (
-  <span className={`tag ${inverted && 'inverted'}`}>{text}</span>
+  <span className={`demo-tag ${inverted && 'inverted'}`}>{text}</span>
 )
 
 import './App.css'
@@ -38,10 +37,13 @@ export default class App extends Component {
     }
   }
 
+  componentDidUpdate () {
+    window.Prism.highlightAll();
+  }
+
   render () {
     const {demoToLoad} = this.state;
     const demoComponent = demosComponents[demoToLoad];
-    console.log(demoComponent)
 
     return (
       <div>
@@ -61,9 +63,11 @@ export default class App extends Component {
         <section className='content'>
           <section className='usage'>
             <Tag inverted text='CODE' />
-            <Highlight language='js'>
-            { jsxToString(demoComponent) }
-            </Highlight>
+              <pre className='language-jsx'>
+                <code className="language-jsx">
+                  { jsxToString(demoComponent) }
+                </code>
+              </pre>
           </section>
 
           <section className='demo'>

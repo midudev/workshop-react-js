@@ -13,10 +13,18 @@ pre {
   padding: 0;
 }
 
-.hljs {
+pre[class*=language-] {
+  margin: 0;
+}
+
+code {
   font-size: 12px;
   padding: 35px 25px 25px;
   text-align: left;
+}
+
+code[class*=language-], pre[class*=language-] {
+  white-space: pre-line;
 }
 
 body {
@@ -106,7 +114,7 @@ img {
   position: relative;
 }
 
-.tag {
+.demo-tag {
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   font-size: 9px;
@@ -116,7 +124,7 @@ img {
   top: 0;
 }
 
-.tag.inverted {
+.demo-tag.inverted {
   background: rgba(0, 0, 0, 0.9);
   font-weight: 100;
 }
