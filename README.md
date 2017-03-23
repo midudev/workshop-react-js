@@ -16,13 +16,16 @@ You'll need installed the next applications. You might want to use `nvm`.
   npm install -g create-react-app
   ```
   
-2. Clone the repository
+2. Clone the repository and install
+
   ```bash
   git clone git@github.com:miduga/workshop-react-js.git
   cd workshop-react-js
+  npm install
   ``` 
   
 3. Start the server
+
   ```bash
   npm start
   ```
