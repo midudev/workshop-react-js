@@ -2,12 +2,28 @@
 
 All the code regarding the workshop of React on Schibsted Spain.
 
+## Requirements
+You'll need installed the next applications. You might want to use `nvm`.
+
+- node 6
+- npm 3
+
 ## Quickstart
 
-```bash
-npm install -g create-react-app
+1. First, you'll need to install `create-react-app` a package made by Facebook in order to use React without configuration.
 
-create-react-app my-app
-cd my-app/
-npm start
-```
+  ```bash
+  npm install -g create-react-app
+  ```
+  
+2. Clone the repository
+  ```bash
+  git clone git@github.com:miduga/workshop-react-js.git
+  cd workshop-react-js
+  ``` 
+  
+3. Start the server
+  ```bash
+  npm start
+  ```
+  
