@@ -6,6 +6,8 @@ const demos = [
   '02-hello-world-with-props',
   '03-using-special-prop-children',
   '04-using-more-children',
+  '05-events-alert-on-click',
+  '06-hello-state',
   'dynamic-children',
   'encapsulating-libraries',
   'life-cycle',
