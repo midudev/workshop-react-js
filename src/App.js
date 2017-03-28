@@ -8,6 +8,8 @@ const demos = [
   '04-using-more-children',
   '05-events-alert-on-click',
   '06-hello-state',
+  '07-initialize-state-with-props',
+  '08-conditional-rendering',
   'dynamic-children',
   'encapsulating-libraries',
   'life-cycle',
