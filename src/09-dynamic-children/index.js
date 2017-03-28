@@ -26,7 +26,7 @@ export default class DynamicChildrenDemo extends Component {
 
         <div className={this.state.show ? 'show' : ''}>
           {this.state.images.map((img, index) => {
-            return <img key={index} role='presentation' src={img} />
+            return <img key={index} alt='image of a computer' src={img} />
           })}
         </div>
 
