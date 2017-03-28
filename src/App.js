@@ -10,7 +10,7 @@ const demos = [
   '06-hello-state',
   '07-initialize-state-with-props',
   '08-conditional-rendering',
-  'dynamic-children',
+  'app-01-movies-searcher',
   'encapsulating-libraries',
   'life-cycle',
   'nesting-views'
@@ -38,7 +38,7 @@ export default class App extends Component {
 
   componentDidMount () {
     const demoToLoad = localStorage.getItem('demoToLoad')
-    if (demoToLoad) {
+    if (demoToLoad && demos.includes(demoToLoad)) {
       this.setState({ demoToLoad })
     }
   }
