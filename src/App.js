@@ -34,9 +34,17 @@ export default class App extends Component {
     }
   }
 
+  componentDidMount () {
+    const demoToLoad = localStorage.getItem('demoToLoad')
+    if (demoToLoad) {
+      this.setState({ demoToLoad })
+    }
+  }
+
   changeDemo (demoToLoad) {
     return () => {
       this.setState({ demoToLoad });
+      localStorage.setItem('demoToLoad', demoToLoad)
     }
   }
 
