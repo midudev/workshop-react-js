@@ -12,13 +12,13 @@ export default class HelloState extends Component {
   handleClick = () => {
     // remember not to use this.state to change the state as state is immutable
     // also, remember that setState is asynchronous
-    this.setState({ message: 'That\'s a new state!' })
+    this.setState({ message: 'Changed the state!' })
   }
 
   render () {
     return (
       <div>
-        <p>Actual state is:<br />{this.state.message}</p>
+        <p>Actual state is:<br /><strong>{this.state.message}</strong></p>
         <button onClick={this.handleClick}>
           Click me and change the state!
         </button>
