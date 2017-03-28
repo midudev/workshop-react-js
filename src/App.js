@@ -10,6 +10,7 @@ const demos = [
   '06-hello-state',
   '07-initialize-state-with-props',
   '08-conditional-rendering',
+  '09-dynamic-children',
   'app-01-movies-searcher',
   'encapsulating-libraries',
   'life-cycle',
